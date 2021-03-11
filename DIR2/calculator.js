@@ -2,6 +2,10 @@
 
 const readline = require('readline-sync');
 
+const MESSAGES = require('./calculator_messages.json');
+
+const KEY = "en";
+
 function prompt(message) {
   console.log(`=> ${message}`);
 }
@@ -10,41 +14,33 @@ function invalidNumber(number) {
   return number.trimStart() === '' || Number.isNaN(Number(number));
 }
 
-
-/// LOOPS AND RETRIEVALS ///
-
-//require('./calculator_messages.json');
-
-
+/// LOOPS ///
 
 while (true) {
 
-
-
   /// USER INPUT ///
 
-  prompt('Welcome to fabulous Calculator!');
+  prompt(MESSAGES[KEY]["swelcome"]);
 
-
-  prompt("What's the first number?");
+  prompt(MESSAGES[KEY]["qfirst"]);
   let number1 = readline.question();
 
   while (invalidNumber(number1)) {
-    prompt("Hmm... that doesn't look like a valid number. Try again!");
+    prompt(MESSAGES[KEY]["sdoesnt_look_good"]);
     number1 = readline.question();
   }
 
 
-  prompt("What's the second number?");
+  prompt(MESSAGES[KEY]["qsecond"]);
   let number2 = readline.question();
 
   while (invalidNumber(number2)) {
-    prompt("Hmm... that doesn't look like a valid number. Try again!");
+    prompt(MESSAGES[KEY]["sdoesnt_look_good"]);
     number2 = readline.question();
   }
 
 
-  prompt('What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide 5) Exponentiate');
+  prompt(MESSAGES[KEY]["qwhatoperator"]);
   let operation = readline.question();
 
 
@@ -53,7 +49,7 @@ while (true) {
     operation = readline.question();
   }
 
-  /// CALCULATION FUNCTIONALITY ///
+  /// CALCULATOR FUNCTIONALITY ///
 
   let output;
   switch (operation) {
@@ -74,12 +70,11 @@ while (true) {
       break;
   }
 
-
   prompt(`The result is: ${output}`);
 
-  prompt('Would you like to perform another operation? (y/n)');
+  prompt(MESSAGES[KEY]["qanother_operator"]);
   let answer = readline.question();
 
   if (answer !== 'y') break;
-  
+
 }
