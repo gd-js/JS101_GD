@@ -10,25 +10,27 @@ function invalidNumber(number) {
   return number.trimStart() === '' || Number.isNaN(Number(number));
 }
 
-/// LOOPS AND RETRIEVAL ///
+
+/// LOOPS AND RETRIEVALS ///
+
+//require('./calculator_messages.json');
+
 
 
 while (true) {
 
 
-  require('./calculator_messages.json');
-
 
   /// USER INPUT ///
 
-
   prompt('Welcome to fabulous Calculator!');
+
 
   prompt("What's the first number?");
   let number1 = readline.question();
 
   while (invalidNumber(number1)) {
-    prompt("Hmm... that doesn't look like a valid number.");
+    prompt("Hmm... that doesn't look like a valid number. Try again!");
     number1 = readline.question();
   }
 
@@ -37,9 +39,10 @@ while (true) {
   let number2 = readline.question();
 
   while (invalidNumber(number2)) {
-    prompt("Hmm... that doesn't look like a valid number.");
+    prompt("Hmm... that doesn't look like a valid number. Try again!");
     number2 = readline.question();
   }
+
 
   prompt('What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide 5) Exponentiate');
   let operation = readline.question();
@@ -50,7 +53,7 @@ while (true) {
     operation = readline.question();
   }
 
-  /// CALCULATOR FUNCTIONALITY ///
+  /// CALCULATION FUNCTIONALITY ///
 
   let output;
   switch (operation) {
@@ -71,14 +74,12 @@ while (true) {
       break;
   }
 
+
   prompt(`The result is: ${output}`);
 
-  /// WHILE LOOP CLOSURE ///
-
   prompt('Would you like to perform another operation? (y/n)');
-
   let answer = readline.question();
 
   if (answer !== 'y') break;
-
+  
 }
