@@ -51,30 +51,36 @@ while (true) {
 
   /// CALCULATOR FUNCTIONALITY ///
 
+  number1 = Number(number1)
+  number2 = Number(number2)
+
   let output;
   switch (operation) {
     case "1":
-      output = Number(number1) + Number(number2);
+      output = number1 + number2;
       break;
     case "2":
-      output = Number(number1) - Number(number2);
+      output = number1 - number2;
       break;
     case "3":
-      output = Number(number1) * Number(number2);
+      output = number1 * number2;
       break;
     case "4":
-      output = Number(number1) / Number(number2);
+      output = number1 / number2;
       break;
     case "5":
-      output = Number(number1) ** Number(number2);
+      output = number1 ** number2;
       break;
   }
 
   prompt(`The result is: ${output}`);
 
   prompt(MESSAGES[KEY]["qanother_operator"]);
+  
   let answer = readline.question();
 
-  if (answer !== 'y') break;
+  if (answer !== "y" && answer !== "Y" )
+  
+  break;
 
 }
