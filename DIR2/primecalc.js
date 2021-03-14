@@ -1,5 +1,9 @@
+/// CONSTANTS AND FUNCTIONS ///
+
 const readline = require("readline-sync");
 
+
+/// USER INPUT ///
 
 console.log("first number?");
 

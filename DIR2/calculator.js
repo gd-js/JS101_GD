@@ -82,5 +82,6 @@ while (true) {
 
   if (answer !== "y" && answer !== "Y" )
   break;
+  console.clear()
 
 }
