@@ -80,7 +80,7 @@ while (true) {
   
   let answer = readline.question();
 
-  if (answer !== "y" && answer !== "Y" )
+  if (answer !== "y" && answer !== "Y")
   break;
   console.clear()
 
