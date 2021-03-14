@@ -5,7 +5,7 @@
 "qsecond" : "What's the second number?",
 "sdoesnt_look_good" : "Hmm... that doesn't look like a valid number. Try again!",
 "qwhatoperator" : "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide 5) Exponentiate",
-"qanother_operator" : "Would you like to perform another operation? (y/n)"
+"qanother_operation" : "Would you like to perform another operation? (y/n)"
  },
   "de": {
 "swelcome" : "Willkommen zum Fabulatora Rechner!",
@@ -13,6 +13,6 @@
 "qsecond" : "Die zweite?",
 "sdoesnt_look_good" : "Bitte erneut die Eingabe prüfen.",
 "qwhatoperator" : "Welchen Rechenoperator wollen Sie durchführen? Wähle \n1) Addition 2) Subtraktion 3) Multiplikation 4) Teilung 5) Exponenzieren",
-"qanother_operator" : "Erneut spielen? (y/n)"
+"qanother_operation" : "Erneut spielen? (y/n)"
   }
 }

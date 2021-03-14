@@ -75,13 +75,12 @@ while (true) {
   }
 
   prompt(`The result is: ${output}`);
-
-  prompt(MESSAGES[KEY]["qanother_operator"]);
+  
+  prompt(MESSAGES[KEY]["qanother_operation"]);
   
   let answer = readline.question();
 
   if (answer !== "y" && answer !== "Y" )
-  
   break;
 
 }
