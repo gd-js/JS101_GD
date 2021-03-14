@@ -19,7 +19,7 @@ while (true) {
   /// USER INPUT ///
 
   prompt("en/de?");
-  KEY = readline.question();
+  let KEY = readline.question();
 
   prompt(MESSAGES[KEY]["swelcome"]);
 
@@ -51,17 +51,18 @@ while (true) {
 
   /// m = p * (j / (1 - Math.pow((1 + j), (-n))));
 
-  let output = loanAmount * (monthlyInterest / (1 - Math.pow((1 + loanAmount), (- durationMonths))));
+  let output = loanAmount * (monthlyInterest / 
+  (1 - Math.pow((1 + loanAmount), (- durationMonths))));
 
 
   prompt(`Your loan will cost per month: \n ${output} USD`);
-  
+
   prompt(MESSAGES[KEY]["qanother_operation"]);
   
   let answer = readline.question();
 
   if (answer !== "y" && answer !== "Y")
   break;
-  console.clear()
+  console.clear();
 
 }
