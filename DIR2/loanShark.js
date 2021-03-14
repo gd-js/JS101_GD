@@ -9,8 +9,7 @@ function prompt(message) {
 }
 
 function invalidNumber(number) {
-  return number.trimStart() === '' || Number.isNaN(Number(number))
-|| number <= 0;
+  return number.trimStart() === '' || Number.isNaN(Number(number)) || number <= 0;
 }
 
 /// LOOP ///
