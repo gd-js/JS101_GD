@@ -9,11 +9,10 @@
  },
   "de" : {
 "swelcome" : "Willkommen zum Finanzhaii-yah!",
-"qloanAmount" : "Wie hoch ist dein erbetener Kredit? \n (Ohne Währungszeichen)",
-"sdoesnt_look_good" : "Bitte erneut die Eingabe prüfen. Hinweis: LOAN SHARK GIBT KEINE 0% KREDITE!",
+"qloanAmount" : "Wie hoch ist dein erbetener Kredit \n (ohne Währungszeichen)?",
+"sdoesnt_look_good" : "Bitte erneut die Eingabe prüfen. \n Hinweis: LOAN SHARK GIBT KEINE 0% KREDITE!",
 "qmonthlyInterest" : "Wie viel Prozent haben wir dir für den Kredit versprochen \n (in Prozent ohne % Zeichen)?",
 "qdurationMonths" : "Wie lange willst du für den Kredit abstottern (in Monaten)?",
-"qanother_operation" : "Erneut berechnen? (Y/n)",
-
+"qanother_operation" : "Erneut berechnen? (Y/n)"
   }
  }
