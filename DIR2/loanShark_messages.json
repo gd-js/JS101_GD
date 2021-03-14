@@ -1,6 +1,7 @@
 {
   "en": {
 "swelcome" : "Welcome to the Trustworthy Loan (Shark). \n -Yass! \n -Yass!\n -Yass!",
+<<<<<<< HEAD
 "qloanAmount" : "Enter the amount of your required loan \n(without currency sign):",
 "sdoesnt_look_good" : "Hmm... that doesn't look like a valid number! Hint: \n LOAN SHARK DOES NOT GIVE ZERO PER CENT LOANS!",
 "qmonthlyInterest" : "What is the monthly interest we promised you \n (in per cent but without % sign)?",
@@ -16,5 +17,20 @@
 "szeroInput" : "Keine Zinsen gibt es nicht in Deutschland!",
 "qdurationMonths" : "Wie lange willst du für den Kredit abstottern (in Monaten)?",
 "qanother_operation" : "Erneut berechnen? (Y/n)"
+=======
+"qloanAmount" : "Enter the amount of your required loan:",
+"sdoesnt_look_good" : "Hmm... that doesn't look like a valid number! Try again!",
+"qmonthlyInterest" : "What is the monthly interest we promised you \n (in per cent but without % sign)?",
+"qdurationMonths" : "How long do you want to keep paying for this loan (in months)?",
+"qanother_operation" : "Would you like to calculate another loan? (y/n)"
+ },
+  "de": {
+"swelcome" : "Willkommen zum Finanzhaii-yah!",
+"qloanAmount" : "Wie hoch ist dein erbetener Kredit?",
+"sdoesnt_look_good" : "Bitte erneut die Eingabe prüfen.",
+"qmonthlyInterest" : "Wie viel Prozent haben wir dir für den Kredit versprochen?",
+"qdurationMonths" : "Wie lange willst du für den Kredit abstottern? (in Monaten)",
+"qanother_operation" : "Erneut berechnen? (y/n)"
+>>>>>>> 41851746048606040bfd214be6c474d9a18a76ad
   }
 }

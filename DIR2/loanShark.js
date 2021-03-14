@@ -9,10 +9,16 @@ function prompt(message) {
 }
 
 function invalidNumber(number) {
+<<<<<<< HEAD
   return number.trimStart() === '' || Number.isNaN(Number(number))
 || number <= 0;
 
 }
+=======
+  return number.trimStart() === '' || Number.isNaN(Number(number));
+}
+
+>>>>>>> 41851746048606040bfd214be6c474d9a18a76ad
 /// LOOP ///
 
 while (true) {
@@ -64,5 +70,8 @@ while (true) {
   if (answer !== "y" && answer !== "Y" )
   break;
   console.clear()
+<<<<<<< HEAD
 
+=======
+>>>>>>> 41851746048606040bfd214be6c474d9a18a76ad
 }
