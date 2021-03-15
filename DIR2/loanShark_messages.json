@@ -4,8 +4,16 @@
 "qloanAmount" : "Enter the amount of your required loan \n(without currency sign):",
 "sdoesnt_look_good" : "Hmm... that doesn't look like a valid number! Hint: \n LOAN SHARK DOES NOT GIVE ZERO PER CENT LOANS! \n Try again!",
 "qmonthlyInterest" : "What is the monthly interest we promised you \n (in per cent but without % sign)?",
-"qdurationMonths" : "How long do you want to keep paying for this loan (in months)?",
-"qanother_operation" : "Would you like to calculate another loan? (Y/n)"
+"qdurationMonths" : "How long do you want to keep paying for this loan \n(in months)?",
+"qanother_operation" : "Would you like to calculate another loan? \n(Y/n)"
+ },
+   "eng" : {
+"swelcome" : "Welcome to the Trustworthy Loan (Shark). \n -Yass! \n -Yass!\n -Yass!",
+"qloanAmount" : "Enter the amount of your required loan \n(without currency sign):",
+"sdoesnt_look_good" : "Hmm... that doesn't look like a valid number! Hint: \n LOAN SHARK DOES NOT GIVE ZERO PER CENT LOANS! \n Try again!",
+"qmonthlyInterest" : "What is the monthly interest we promised you \n (in per cent but without % sign)?",
+"qdurationMonths" : "How long do you want to keep paying for this loan \n(in months)?",
+"qanother_operation" : "Would you like to calculate another loan? \n(Y/n)"
  },
   "de" : {
 "swelcome" : "Willkommen zum Finanzhaii-yah!",
@@ -13,6 +21,14 @@
 "sdoesnt_look_good" : "Bitte erneut die Eingabe prüfen. \n Hinweis: LOAN SHARK GIBT KEINE 0% KREDITE! \n Versuchs erneut!",
 "qmonthlyInterest" : "Wie viel Prozent haben wir dir für den Kredit versprochen \n (in Prozent ohne % Zeichen)?",
 "qdurationMonths" : "Wie lange willst du für den Kredit abstottern (in Monaten)?",
-"qanother_operation" : "Erneut berechnen? (Y/n)"
+"qanother_operation" : "Erneut berechnen? \n(Y/n)"
+  },
+    "ger" : {
+"swelcome" : "Willkommen zum Finanzhaii-yah!",
+"qloanAmount" : "Wie hoch ist dein erbetener Kredit \n (ohne Währungszeichen)?",
+"sdoesnt_look_good" : "Bitte erneut die Eingabe prüfen. \n Hinweis: LOAN SHARK GIBT KEINE 0% KREDITE! \n Versuchs erneut!",
+"qmonthlyInterest" : "Wie viel Prozent haben wir dir für den Kredit versprochen \n (in Prozent ohne % Zeichen)?",
+"qdurationMonths" : "Wie lange willst du für den Kredit abstottern (in Monaten)?",
+"qanother_operation" : "Erneut berechnen? \n(Y/n)"
   }
  }
