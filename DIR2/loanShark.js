@@ -66,8 +66,9 @@ while (true) {
   let output = loanAmount * (monthlyInterest /
   (1 - Math.pow((1 + loanAmount), (-durationMonths))));
 
-
   prompt(`Your loan will cost per month: \n ~ ${output} USD ~`);
+
+  /// REPEAT PROGRAM OPTIONALITY ///
 
   prompt(MESSAGES[KEY]["qanother_operation"]);
   let answer = readline.question();
