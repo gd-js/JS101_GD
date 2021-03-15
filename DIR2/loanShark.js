@@ -27,9 +27,9 @@ while (true) {
   prompt("en/de?");
   let lowerKEY = readline.question();
   let KEY = lowerKEY.toLowerCase();
-  
+
   while (invalidKEY(KEY)) {
-    prompt("You must enter \'de\' for german or \'en\' for english \n for respective language support.");
+    prompt("You must enter 'de' for german or 'en' for english \n for respective language support.");
     KEY = readline.question();
   }
 
@@ -72,9 +72,8 @@ while (true) {
   prompt(MESSAGES[KEY]["qanother_operation"]);
   let answer = readline.question();
 
-  if (answer !== "y" && answer !== "Y")
-  break;
-  
+  if (answer !== "y" && answer !== "Y") break;
+
   console.clear();
 
 }
