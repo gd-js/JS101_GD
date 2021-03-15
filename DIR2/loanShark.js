@@ -30,7 +30,9 @@ while (true) {
 
   while (invalidKEY(KEY)) {
     prompt("You must enter 'de' for german or 'en' for english \n for respective language support.");
-    KEY = readline.question();
+    lowerKEY = readline.question();
+    KEY = lowerKEY.toLowerCase();
+
   }
 
   prompt(MESSAGES[KEY]["swelcome"]);
@@ -66,8 +68,9 @@ while (true) {
   let output = loanAmount * (monthlyInterest /
   (1 - Math.pow((1 + loanAmount), (-durationMonths))));
 
-
   prompt(`Your loan will cost per month: \n ~ ${output} USD ~`);
+
+  /// REPEAT PROGRAM OPTIONALITY ///
 
   prompt(MESSAGES[KEY]["qanother_operation"]);
   let answer = readline.question();
