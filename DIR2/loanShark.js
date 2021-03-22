@@ -47,11 +47,12 @@ while (true) {
 
   prompt(MESSAGES[KEY]["qmonthlyInterest"]);
   let monthlyInterestInput = readline.question();
-  let monthlyInterest = monthlyInterestInput / 12;
+  monthlyInterest = monthlyInterestInput / 12;
 
   while (invalidNumber(monthlyInterestInput)) {
-    prompt(MESSAGES[KEY]["sdoesnt_look_good"]);
-    monthlyInterestInput = readline.question();
+    prompt(MESSAGES[KEY]["sdoesnt_look_good"]);  
+  monthlyInterestInput = readline.question();
+
   }
 
   prompt(MESSAGES[KEY]["qdurationMonths"]);
@@ -64,14 +65,9 @@ while (true) {
 
   /// LOAN CALCULATION ///
 
-  /// m = p * (j / (1 - Math.pow((1 + j)** (-n))));
-   
-  /// m = monthly payment
-  /// p = loan amount
-  /// j = monthly interest rate
-  /// n = loan duration in months
+  /// m = p * (j / (1 - Math.pow((1 + j), (-n))));
 
-  let output = loanAmount * (monthlyInterest / (1 - Math.pow((1 + monthlyInterest)**(-durationMonths))));
+  let output = (loanAmount * (monthlyInterest) / ((1 - Math.pow((1 + monthlyInterest)), (-durationMonths))));
 
   prompt(`Your loan will cost per month: \n ~ ${output} USD ~`);
 
