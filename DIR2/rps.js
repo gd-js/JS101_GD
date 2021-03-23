@@ -1,87 +1,88 @@
 /// CONSTANTS AND FUNCTIONS ///
 ///to add: best of five
-///to add: letter input
+///to add: clear screen
 
 const readline = require('readline-sync');
-const VALID_CHOICES = ['rock','r','paper','p','scissors','sc','lizard','l','spock','sp'];
+const VALID_CHOICES = ['rock', 'paper', 'scissors', 'lizard', 'spock', 'sp', 'r', 'p', 'sc', 'l'];
 
 function prompt(message) {
   console.log(`=> ${message}`);
 }
 
-function letterToName(choiceInput) {
-  switch (choiceInput) {
+function capitalizeFirstLetter(string) {
+return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function letterToName(singleLetter) {
+  switch (singleLetter) {
   case "r":
-    choice = "Rock";
-    computerChoice = "Rock";
-    return choice;
-    return computerChoice;
+    return nameOutput = "rock";
   case "p": 
-    choice = "Paper";
-    computerChoice = "Paper";
-    return choice;
-    return computerChoice;
+    return nameOutput = "paper";
     break;
   case "sc":
-    choice = "Scissors";
-    computerChoice = "Scissors";
-    return choice;
-    return computerChoice;
+    return nameOutput = "scissors";
     break;
   case "l":
-    choice = "Lizard";
-    computerChoice = "Lizard";
-    return choice;
-    return computerChoice;
+    return nameOutput = "lizard";
     break;
   case "sp":
-    choice = "Spock";
-    computerChoice = "Spock";
-    return choice;
-    return computerChoice;
+    return nameOutput = "spock";
     break;
-  case "rock" || "paper" || "scissors" || "lizard" || "spock":
-    return inputChoice;
-    break; 
+  default:
+    return nameOutput = singleLetter;
+    break;
   }
 }
 
-function displayWinner(choice, computerChoice) {
-  prompt(`You chose ${letterToName(choice)}, computer chose ${letterToName(computerChoice)}`);
+function displayChoices(choice, computerChoice) {
 
-  if (((choice === ('rock' || 'r') && (computerChoice === ('scissors' || 'sc' || 'lizard' || 'l')))) ||
-      ((choice === ('paper' || 'p') && (computerChoice === ('rock' || 'r' || 'spock' || 'sp')))) ||
-      ((choice === ('scissors' || 'sc') && (computerChoice === ('paper' || 'p' || 'lizard' || 'l')))) ||
-      ((choice === ('spock' || 'sp') && (computerChoice === ('scissors' || 'sc' || 'rock' || 'r')))) ||
-      ((choice === ('lizard' || 'l') && (computerChoice === ('spock' || 'sp' || 'paper' || 'p'))))){
+  outputChoice = letterToName(choice);
+
+  outputChoiceCapitalized = capitalizeFirstLetter(outputChoice);
+
+  outputComputerChoiceCapitalized = capitalizeFirstLetter(computerChoice);
+
+  prompt(`You chose ${outputChoiceCapitalized}, computer chose ${outputComputerChoiceCapitalized}`);
+}
+
+function evaluateWinner(choice, computerChoice) {
+ if (((choice === ('rock' || 'r') && (computerChoice === ('scissors' ||'lizard')))) ||
+      ((choice === ('paper' || 'p') && (computerChoice === ('rock'  || 'spock')))) ||
+      ((choice === ('scissors' || 'sc') && (computerChoice === ('paper' ||'lizard')))) ||
+      ((choice === ('spock' || 'sp') && (computerChoice === ('scissors' ||'rock')))) ||
+      ((choice === ('lizard' || 'l') && (computerChoice === ('spock' || 'paper'))))) {
     prompt('You win!');
   } else if (choice === computerChoice) {
     prompt('It\'s a tie!');
-  } else {
-    prompt('Computer wins!');
-  }
+   } else {
+     prompt('Computer wins!');
+   }
 }
 
-/// LOOP ///
+/// WHILE LOOP ///
 
 while (true) {
   prompt('Choose one: Rock/r, Paper/p, Scissors/sc, Lizard/l or Spock/sp');
   let choice = readline.question().toLowerCase();
 
   while (!VALID_CHOICES.includes(choice)) {
-    prompt("That's not a valid choice");
-    choice = readline.question();
+    prompt("That's not a valid choice. Try again!");
+    choice = readline.question().toLowerCase();
   }
 
   let randomIndex = Math.floor(Math.random() * (VALID_CHOICES.length - 5));
   let computerChoice = VALID_CHOICES[randomIndex];
 
-  displayWinner(choice, computerChoice);
+
+  displayChoices(choice, computerChoice);
+  evaluateWinner(choice, computerChoice);
 
   prompt('Do you want to play again (y/n)?');
   let answer = readline.question().toLowerCase();
+
   while (answer[0] !== 'n' && answer[0] !== 'y') {
-    prompt('Please enter "y" or "n".');
+    prompt('Please enter "y" or "n". Try again!');
     answer = readline.question().toLowerCase();
   }
 
