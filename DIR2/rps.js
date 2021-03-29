@@ -9,55 +9,49 @@ function prompt(message) {
   console.log(`=> ${message}`);
 }
 
-function capitalizeFirstLetter(string) {
-return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
 function letterToName(singleLetter) {
+  let nameOutput;
   switch (singleLetter) {
-  case "r":
-    return nameOutput = "rock";
-  case "p": 
-    return nameOutput = "paper";
-    break;
-  case "sc":
-    return nameOutput = "scissors";
-    break;
-  case "l":
-    return nameOutput = "lizard";
-    break;
-  case "sp":
-    return nameOutput = "spock";
-    break;
-  default:
-    return nameOutput = singleLetter;
-    break;
+    case "r":
+      nameOutput = "rock";
+      return nameOutput;
+    case "p":
+      nameOutput = "paper";
+      return nameOutput;
+    case "sc":
+      nameOutput = "scissors";
+      return nameOutput;
+    case "l":
+      nameOutput = "lizard";
+      return nameOutput;
+    case "sp":
+      nameOutput = "spock";
+      return nameOutput;
+    default:
+      nameOutput = singleLetter;
+      return nameOutput;
+      break;
   }
 }
 
-function displayChoices(choice, computerChoice) {
 
-  outputChoice = letterToName(choice);
-
-  outputChoiceCapitalized = capitalizeFirstLetter(outputChoice);
-
-  outputComputerChoiceCapitalized = capitalizeFirstLetter(computerChoice);
-
-  prompt(`You chose ${outputChoiceCapitalized}, computer chose ${outputComputerChoiceCapitalized}`);
+function displayChoices(displayChoiceOutput, displayComputerChoiceOutput) {
+  displayChoiceInput = 
+  prompt(`You chose ${displayChoiceOutput}, computer chose ${displayComputerChoiceOutput}`);
 }
 
-function evaluateWinner(choice, computerChoice) {
- if (((choice === ('rock' || 'r') && (computerChoice === ('scissors' ||'lizard')))) ||
-      ((choice === ('paper' || 'p') && (computerChoice === ('rock'  || 'spock')))) ||
-      ((choice === ('scissors' || 'sc') && (computerChoice === ('paper' ||'lizard')))) ||
-      ((choice === ('spock' || 'sp') && (computerChoice === ('scissors' ||'rock')))) ||
-      ((choice === ('lizard' || 'l') && (computerChoice === ('spock' || 'paper'))))) {
+function displayWinner(choice, computerChoice) {
+  if (((choice === ('rock' || 'r') && (computerChoice === ('scissors' || 'lizard')))) ||
+    ((choice === ('paper' || 'p') && (computerChoice === ('rock' || 'spock')))) ||
+    ((choice === ('scissors' || 'sc') && (computerChoice === ('paper' || 'lizard')))) ||
+    ((choice === ('spock' || 'sp') && (computerChoice === ('scissors' || 'rock')))) ||
+    ((choice === ('lizard' || 'l') && (computerChoice === ('spock' || 'paper'))))) {
     prompt('You win!');
   } else if (choice === computerChoice) {
     prompt('It\'s a tie!');
-   } else {
-     prompt('Computer wins!');
-   }
+  } else {
+    prompt('Computer wins!');
+  }
 }
 
 /// WHILE LOOP ///
@@ -74,9 +68,8 @@ while (true) {
   let randomIndex = Math.floor(Math.random() * (VALID_CHOICES.length - 5));
   let computerChoice = VALID_CHOICES[randomIndex];
 
-
   displayChoices(choice, computerChoice);
-  evaluateWinner(choice, computerChoice);
+  displayWinner(choice, computerChoice);
 
   prompt('Do you want to play again (y/n)?');
   let answer = readline.question().toLowerCase();
