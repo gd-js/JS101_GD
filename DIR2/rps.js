@@ -9,32 +9,21 @@ function prompt(message) {
   console.log(`=> ${message}`);
 }
 
-function letterToName(singleLetter) {
-  let nameOutput;
-  switch (singleLetter) {
-    case "r":
-      nameOutput = "rock";
-      return nameOutput;
-    case "p":
-      nameOutput = "paper";
-      return nameOutput;
-    case "sc":
-      nameOutput = "scissors";
-      return nameOutput;
-    case "l":
-      nameOutput = "lizard";
-      return nameOutput;
-    case "sp":
-      nameOutput = "spock";
-      return nameOutput;
-    default:
-      nameOutput = singleLetter;
-      return nameOutput;
-  }
-}
+let letterCapitalsObj = {
+   "r": "Rock",
+   "p": "Paper",
+   "sc": "Scissors",
+   "l": "Lizard",
+   "sp": "Spock",
+   "rock" : "Rock",
+   "paper" : "Paper",
+   "scissors" : "Scissors",
+   "lizard" : "Lizard",
+   "spock" : "Spock"
+};
 
 function displayChoices(displayChoiceOutput, displayComputerChoiceOutput) {
-  prompt(`You chose ${letterToName(displayChoiceOutput)}, computer chose ${displayComputerChoiceOutput}`);
+  prompt(`You chose ${letterCapitalsObj[displayChoiceOutput]}, computer chose ${letterCapitalsObj[displayComputerChoiceOutput]}`);
 }
 
 function displayWinner(choice, computerChoice) {
