@@ -1,6 +1,5 @@
 /// CONSTANTS AND FUNCTIONS ///
 ///to add: best of five
-///to add: clear screen
 
 const readline = require('readline-sync');
 const VALID_CHOICES = ['rock', 'paper', 'scissors', 'lizard', 'spock', 'sp', 'r', 'p', 'sc', 'l'];
