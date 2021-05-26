@@ -1,1 +1,1 @@
-This is one of many directories mapping my Launch School attendance.
+This is one of many repositories mapping my Launch School attendance.
